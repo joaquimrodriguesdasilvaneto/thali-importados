@@ -295,7 +295,6 @@ function renderGallery(media, pid) {
 /* ═══ RENDER: PRODUCT CARD ═══ */
 function renderCard(p) {
   const cat = CATS.find(c => c.id === p.category) || CATS[0];
-  const priceDisplay = p.price ? `R$ ${p.price}` : "Consulte";
   const priceDisplay = p.price ? `<span class="price-symbol">R$</span> <span class="price-value">${p.price}</span>` : `<span class="price-consult">Consulte</span>`;
   const propsHtml = (p.props && p.props.length) ? `<div class="tags">${p.props.map(pr => `<span class="tag">${pr.prop_key}: ${pr.prop_value}</span>`).join("")}</div>` : "";
   return `
